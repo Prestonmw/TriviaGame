@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
         function initialScreen() {
-        startScreen = "<p class='text-center main-button-container'><a class='btn btn-primary btn-lg btn-block start-button' href='#' role='button'>Start Quiz</a></p>";
+        startScreen = "<p class='text-center main-button-container'><a class='btn btn-primary btn-lg btn-block start-button' href='#' role='button'>Let's Go!</a></p>";
         $(".mainArea").html(startScreen);
     }
     
@@ -41,7 +41,7 @@ $(document).ready(function() {
     
     function generateLossDueToTimeOut() {
         unansweredTally++;
-        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Time's Up! The correct answer was: " + correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='img/x.png'>";
+        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Time's Up! The correct answer was: "+ correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/wrong.png'>";
         $(".mainArea").html(gameHTML);
         setTimeout(wait, 4000);  
     }
@@ -55,7 +55,7 @@ $(document).ready(function() {
     
     function generateLoss() {
         incorrectTally++;
-        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Booooo! The correct answer is: "+ correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='img/x.png'>";
+        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Booooo! The correct answer is: "+ correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/wrong.png'>";
         $(".mainArea").html(gameHTML);
         setTimeout(wait, 4000); 
     }
@@ -109,10 +109,10 @@ $(document).ready(function() {
     var startScreen;
     var gameHTML;
     var counter = 30;
-    var questionArray = ["Who is the first Pokemon in the Pokedex?", "Which Pokemon is in Smash Bros.?", "Which Pokemon was the fisrt Pseudo-Legendary beast?", "What is the capital of Japan?", "What is the capital of China?", "What is the capital of Turkey?", "What is the capital of Colombia?", "What is the capital of India?"];
-    var answerArray = [["Rhydon", "Pikachu", "Bulbasaur", "Mew"], ["Mewtwo","Jigglypuff","Pikachu","All the Above"], ["Dragonite", "Charizard", "Celebi", "Salamence"], ["Kyoto","Hiroshima","Tokyo","Osaka"], ["Hong Kong", "Macau", "Shanghai", "Beijing"], ["Ankara","Istanbul","Antalya","Bursa"], ["Medellin", "Bogota", "Cartagena", "Cali"], ["Mumbai","Hyderabad","Bangalore","New Delhi"]];
-    var imageArray = ["<img class='center-block img-right' src='img/australia.png'>", "<img class='center-block img-right' src='img/liberia.png'>", "<img class='center-block img-right' src='img/taiwan.png'>", "<img class='center-block img-right' src='img/japan.png'>", "<img class='center-block img-right' src='img/china.png'>", "<img class='center-block img-right' src='img/turkey.png'>", "<img class='center-block img-right' src='img/colombia.png'>", "<img class='center-block img-right' src='img/india.png'>"];
-    var correctAnswers = ["C. Bulbasaur", "D. All the Above", "A. Dragonite", "C. Tokyo", "D. Beijing", "A. Ankara", "B. Bogota", "D. New Delhi"];
+    var questionArray = ["Who is the first Pokemon in the Pokedex?", "Which Pokemon is in Smash Bros.?", "Which Pokemon was the first Pseudo-Legendary beast?", "What region was first introduced?", "Who trains a destructive Miltank?", "Who is the Leader of Team Skull?", "What was the Alola Region based on?", "Happy Pride Month! What Pokemon is the Rainbow Pokemon?"];
+    var answerArray = [["Rhydon", "Pikachu", "Bulbasaur", "Mew"], ["Mewtwo","Jigglypuff","Pikachu","All the Above"], ["Dragonite", "Charizard", "Celebi", "Salamence"], ["Johto","Kanto","Tokyo","Hoenn"], ["Morty", "Misty", "Erika", "Whitney"], ["Giovanni","Plumeria","Guzma","Lusamine"], ["Cambodia", "Japan", "The Bahamas", "Hawaii"], ["Jigglypuff","Jirachi","Magikarp","Ho-Oh"]];
+    var imageArray = ["<img src='assets/images/bulbasaur.png'>", "<img class src='assets/images/smash.png'>","<img src='assets/images/dragonite.png'>", "<img src='assets/images/kanto.png'>", "<img src='assets/images/miltank.png'>", "<img src='assets/images/guzma.png'>", "<img src='assets/images/alola.png'>", "<img src='assets/images/hooh.png'>"];
+    var correctAnswers = ["C. Bulbasaur", "D. All the Above", "A. Dragonite", "B. Kanto", "D. Whitney", "C. Guzma", "D. Hawaii", "D. Ho-Oh"];
     var questionCounter = 0;
     var selecterAnswer;
     var theClock;
