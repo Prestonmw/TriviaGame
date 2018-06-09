@@ -45,6 +45,7 @@
   }
   
   body {
+    font-family: fantasy;
     background-image: url("../images/background.png");
     color: blue;
   }
